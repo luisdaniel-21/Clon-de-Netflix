@@ -1,5 +1,7 @@
 import 'package:clon_netflix/componentes/nav_bar.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/src/widgets/basic.dart';
+import 'package:flutter/src/widgets/framework.dart';
 
 class CartelPrincipal extends StatelessWidget {
   @override
@@ -17,7 +19,7 @@ class CartelPrincipal extends StatelessWidget {
     return Stack(
       children: <Widget>[
         Image.network(
-          'https://www.tonica.la/__export/1570652757932/sites/debate/img/2019/10/09/peaky_blinders_7_1.jpg_393767600.jpg',
+          'https://img.menzig.style/f/500/597-f1.jpg',
           height: 350.0,
           fit: BoxFit.cover,
         ),
@@ -83,12 +85,17 @@ class CartelPrincipal extends StatelessWidget {
               )
             ],
           ),
-          FlatButton.icon(
+          ElevatedButton.icon(
+              style: ElevatedButton.styleFrom(
+                  primary: Colors.black,
+                  side: BorderSide(
+                    width: 2.0,
+                    color: Colors.black,
+                  )),
               onPressed: () {},
-              color: Colors.white,
               icon: Icon(
                 Icons.play_arrow,
-                color: Colors.black,
+                color: Colors.white,
               ),
               label: Text('Reproducir')),
           Column(
